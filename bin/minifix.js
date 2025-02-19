@@ -25,7 +25,7 @@ if (!existsSync(configPath)) {
  */`;
     writeFileSync(configPath, defaultConfig);
     console.log(`${textGreen('Configuration file created: minifix.config.js')}`);
-    console.log(`Now you can customize your settings in minifix.config.js and run the ${textBlue(minifix)} again.\n`);
+    console.log(`Now you can customize your settings in minifix.config.js and run the ${textBlue('minifix')} again.\n`);
 }
 
 import(configPath).then(module => {
