@@ -14,7 +14,9 @@ if (!existsSync(configPath)) {
     minifyOptions: {
         css: {},
         js: {},
-        html: {}
+        html: {
+            collapseWhitespace: true,
+        }
     }
 };
 
