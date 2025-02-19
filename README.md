@@ -23,6 +23,13 @@ Powered by:
 - [clean-css (CSS Minifier)](https://github.com/clean-css/)
 - [html-minifier-terser (HTML Minifier)](https://github.com/terser/html-minifier-terser)
 
+## 📋 Requirements
+
+Before installing **minifix**, make sure your environment meets the following requirements:
+
+- **Node.js** `14+` (recommended `16+`)
+- **NPM** `6.14+` (recommended `8+`)
+
 ## 📦 Installation
 
 Before installing **minifix**, consider whether you need a **local** or **global** installation:  
@@ -58,23 +65,25 @@ npx minifix
 minifix
 ```
 
+📌 If `minifix.config.mjs` does not exist, it will be created automatically.
+
 ## 📂 Supported File Types
 
 minifix supports minification for:
 
 - **JavaScript** (`.js`,`.mjs`,`.cjs`)
-- **CSS** (`.css`)
 - **HTML** (`.html`,`.htm`)
+- **CSS** (`.css`)
 
 ## ⚙️ Configuration
 
-Edit the `minifix.config.js` file to define input files, output files, and minification options.
+Edit the `minifix.config.mjs` file to define input files, output files, and minification options.
 
 ### Available Options
 
-- **inputs** - List of input files
-- **outputs** - List of output files
-- **minifyOptions** - Minification options:
+- **inputs** - List of input files  
+- **outputs** (optional) - List of output files. If not provided, a default output file will be created in the same directory as the input file with `_output_` appended to its name.  
+- **minifyOptions** - Minification options for each file type
 
 📌 Refer to the official documentation for **minifyOptions**:
 
@@ -85,7 +94,7 @@ Edit the `minifix.config.js` file to define input files, output files, and minif
 ### Example Configuration
 
 ```js
-/* minifix.config.js */
+/* minifix.config.mjs */
 export default {
     inputs: ["views/input.html", "assets/css/input.css", "assets/js/input.js"],
     outputs: ["views/index.html", "assets/css/style.css", "assets/js/default.js"],
@@ -113,6 +122,7 @@ We appreciate any contributions!
 
 If you encounter any issues, please open an issue in our GitHub repository:
 
+➡️ [GitHub Repository](https://github.com/ramoures/minifix)  
 [➡️ Create a new issue](https://github.com/ramoures/minifix/issues)
 
 For feature requests or bug reports, follow these steps:

@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 import { resolve } from 'path';
 import { existsSync, writeFileSync } from 'fs';
-import { setConfigs, minifyFile, watchFile } from '../lib/minifix.js';
-import { textBlue, textGreen, textRed, textYellow } from '../lib/ANSI.js';
+import { setConfigs, minifyFile, watchFile } from '../lib/minifix.mjs';
+import { textBlue, textGreen, textRed, textYellow } from '../lib/ANSI.mjs';
 
-const configPath = resolve(process.cwd(), 'minifix.config.js');
+const configPath = resolve(process.cwd(), 'minifix.config.mjs');
 
 if (!existsSync(configPath)) {
-    console.log(`${textYellow('Creating default minifix.config.js...')}`);
+    console.log(`${textYellow('Creating default minifix.config.mjs...')}`);
     const defaultConfig = `export default {
     inputs: [],
     outputs: [],
@@ -24,8 +24,8 @@ if (!existsSync(configPath)) {
  * HTML Options: https://github.com/terser/html-minifier-terser#options-quick-reference
  */`;
     writeFileSync(configPath, defaultConfig);
-    console.log(`${textGreen('Configuration file created: minifix.config.js')}`);
-    console.log(`Now you can customize your settings in ${textYellow('minifix.config.js')} and run the ${textBlue('npx minifix')} again.\n`);
+    console.log(`${textGreen('Configuration file created: minifix.config.mjs')}`);
+    console.log(`Now you can customize your settings in ${textYellow('minifix.config.mjs')} and run the ${textBlue('npx minifix')} again.\n`);
     process.exit(0);
 }
 

@@ -19,9 +19,9 @@
     "license": "MIT",
     "author": "Ramin Moradi Espili - github.com/ramoures",
     "type": "module",
-    "main": "lib/minifix.js",
+    "main": "lib/minifix.mjs",
     "bin": {
-        "minifix": "bin/minifix.js"
+        "minifix": "bin/minifix.mjs"
     },
     "directories": {
         "lib": "lib"
