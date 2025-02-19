@@ -2,7 +2,7 @@
 import { resolve } from 'path';
 import { existsSync, writeFileSync } from 'fs';
 import { setConfigs, minifyFile, watchFile } from '../lib/minifix.js';
-import { textGreen, textRed, textYellow } from '../lib/ANSI.js';
+import { textBlue, textGreen, textRed, textYellow } from '../lib/ANSI.js';
 
 const configPath = resolve(process.cwd(), 'minifix.config.js');
 
@@ -16,9 +16,16 @@ if (!existsSync(configPath)) {
         js: {},
         html: {}
     }
-};`;
+};
+
+/**
+ * CSS Options: https://github.com/clean-css/clean-css#constructor-options
+ * JS Options: https://terser.org/docs/options/
+ * HTML Options: https://github.com/terser/html-minifier-terser#options-quick-reference
+ */`;
     writeFileSync(configPath, defaultConfig);
     console.log(`${textGreen('Configuration file created: minifix.config.js')}`);
+    console.log(`Now you can customize your settings in minifix.config.js and run the ${textBlue(minifix)} again.\n`);
 }
 
 import(configPath).then(module => {
