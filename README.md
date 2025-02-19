@@ -62,9 +62,9 @@ minifix
 
 minifix supports minification for:
 
-- **JavaScript** (`.js`)
+- **JavaScript** (`.js`,`.mjs`,`.cjs`)
 - **CSS** (`.css`)
-- **HTML** (`.html`)
+- **HTML** (`.html`,`.htm`)
 
 ## ⚙️ Configuration
 
