@@ -1,0 +1,37 @@
+{
+    "name": "minifix",
+    "version": "1.0.8",
+    "description": "A lightweight JS, CSS, and HTML minifier with live watching support",
+    "keywords": [
+        "minifier",
+        "minify",
+        "compression",
+        "compress"
+    ],
+    "homepage": "https://github.com/ramoures/minifix#readme",
+    "bugs": {
+        "url": "https://github.com/ramoures/minifix/issues"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ramoures/minifix.git"
+    },
+    "license": "MIT",
+    "author": "Ramin Moradi Espili - github.com/ramoures",
+    "type": "module",
+    "main": "lib/minifix.js",
+    "bin": {
+        "minifix": "bin/minifix.js"
+    },
+    "directories": {
+        "lib": "lib"
+    },
+    "dependencies": {
+        "terser": "^5.24.0",
+        "clean-css": "^5.3.2",
+        "html-minifier-terser": "^6.1.0"
+    },
+    "engines": {
+        "node": ">=16"
+    }
+}
