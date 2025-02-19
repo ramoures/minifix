@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 import { resolve } from 'path';
 import { existsSync, writeFileSync } from 'fs';
-import { setConfigs, minifyFile, watchFile } from '../lib/minifix';
-import { textGreen, textRed, textYellow } from '../lib/ANSI';
+import { setConfigs, minifyFile, watchFile } from '../lib/minifix.js';
+import { textGreen, textRed, textYellow } from '../lib/ANSI.js';
 
 const configPath = resolve(process.cwd(), 'minifix.config.js');
 
