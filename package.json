@@ -1,6 +1,6 @@
 {
     "name": "minifix",
-    "version": "1.0.11",
+    "version": "1.0.12",
     "description": "A lightweight JS, CSS, and HTML minifier with live watching support",
     "keywords": [
         "minifier",
