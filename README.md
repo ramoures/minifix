@@ -7,6 +7,7 @@
 [![npm version](https://img.shields.io/npm/v/minifix)](https://www.npmjs.com/package/minifix)
 [![License](https://img.shields.io/github/license/ramoures/minifix)](LICENSE)
 [![Issues](https://img.shields.io/github/issues/ramoures/minifix)](https://github.com/ramoures/minifix/issues)
+[![Run Tests](https://github.com/ramoures/minifix/actions/workflows/test.yml/badge.svg)](https://github.com/ramoures/minifix/actions/workflows/test.yml)
 
 A lightweight and flexible minifier for **JavaScript, CSS, and HTML** with live file-watching support.
 
