@@ -3,6 +3,7 @@ import { resolve } from 'path';
 import { existsSync, writeFileSync } from 'fs';
 import { setConfigs, minifyFile, watchFile } from '../lib/minifix.mjs';
 import { textBlue, textGreen, textRed, textYellow } from '../lib/ANSI.mjs';
+import { pathToFileURL } from 'url';
 
 const configPath = resolve(process.cwd(), 'minifix.config.mjs');
 
@@ -30,8 +31,8 @@ if (!existsSync(configPath)) {
     console.log(`Now you can customize your settings in ${textYellow('minifix.config.mjs')} and run the ${textBlue('npx minifix')} again.\n`);
     process.exit(0);
 }
-
-import(configPath).then(module => {
+const configPathUlr = pathToFileURL(configPath);
+import(configPathUlr?.href).then(module => {
     const configs = module.default ?? module;
     if (!configs || !configs.inputs || !configs.outputs || !configs.minifyOptions) {
         throw new Error(`${textRed('Invalid configuration.')}`);
