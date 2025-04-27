@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import { resolve } from 'path';
 import { existsSync, writeFileSync } from 'fs';
+import { pathToFileURL } from 'url';
 import { setConfigs, minifyFile, watchFile } from '../lib/minifix.mjs';
 import { textBlue, textGreen, textRed, textYellow } from '../lib/ANSI.mjs';
-import { pathToFileURL } from 'url';
 
 const configPath = resolve(process.cwd(), 'minifix.config.mjs');
 
